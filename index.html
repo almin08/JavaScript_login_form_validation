@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+    .form-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .form-group i {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      display: none;
+    }
+    .error {
+      border-color: red !important;
+    }
+    .error-icon {
+      color: red;
+      display: inline-block !important;
+    }
+    .success {
+      border-color: green !important;
+    }
+    .success-icon {
+      color: green;
+      display: inline-block !important;
+    }
+    #messages {
+      margin-top: 20px;
+      font-size: 14px;
+      color: red;
+    }
+    #messages.success {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Login form</h2>
+  <form id="loginForm">
+    <div class="form-group">
+      <input type="text" id="username" placeholder="Username">
+      <i id="usernameIcon" class="fa"></i>
+    </div>
+    <div class="form-group">
+      <input type="password" id="password" placeholder="Password">
+      <i id="passwordIcon" class="fa"></i>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+
+  <div id="messages"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
